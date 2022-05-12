@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+
+
+  
+  
+  <meta name="author" content="david">
+
+
+
+  
+  
+  <meta name="copyright" content="">
+
+
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+  
+
+
+  
+  
+  <title>Procesamiento individual de punto</title>
+</head>
+
+
+<body>
+
+
+
+<h1 style="font-family: Helvetica,Arial,sans-serif;">Procesamiento individual de Puntos</h1>
+
+
+
+<hr style="font-family: Helvetica,Arial,sans-serif;">
+<p style="font-family: Helvetica,Arial,sans-serif;">El procesamiento individual de puntos permite al usuario
+convertir o transformar las coordenadas (geogr&aacute;ficas, planas
+cartesianas o planas Gauss-Kr&uuml;ger) de un punto asociado a
+alguno de los dos sistemas de referencia utilizados en Colombia (<strong>Datum
+BOGOT&Aacute;, MAGNA-SIRGAS</strong>).</p>
+
+
+
+<div style="font-family: Helvetica,Arial,sans-serif;" class="nota">
+<h2>Importante:</h2>
+
+
+
+<ul>
+
+
+
+  <li>Debe identificarse claramente, tanto en los valores
+iniciales, como en los requeridos, el tipo de coordenadas y su marco de
+referencia.</li>
+
+
+
+  <li>Las coordenadas planas cartesianas, las planas
+Gauss-Kr&uuml;ger y la altura deben expresarse en metros.</li>
+
+
+
+  <li>El formato de las coordenadas geogr&aacute;ficas
+corresponde con GG.MMSSSSS, por ejemplo, la latitud 4&deg;
+15&acute; 12,355" debe introducirse como 4.1512355. Debe
+anteponerse el signo menos [-] a las latitudes SUR.</li>
+
+
+
+  <li>El programa asume todos los valores dados en la longitud
+como OESTE. El separador decimal siempre es el punto [.].</li>
+
+
+
+  <li>Si no est&aacute; disponible la altura del punto de
+inter&eacute;s y, a&uacute;n as&iacute; se prefiere el uso
+del Modelo Molodensky-Badekas, debe indicarse un valor de altura
+aproximado para el punto; de lo contrario, <strong>CONCOORD</strong>
+adelanta una transformaci&oacute;n bidimensional por defecto.</li>
+
+
+
+  <li>Las coordenadas transformadas contienen una sola cifra
+decimal, dadas las limitaciones de precisi&oacute;n en cualquier
+m&eacute;todo de transformaci&oacute;n de datum. Las alturas
+niveladas no se transforman.</li>
+
+
+
+  <li>Seleccione el marco de referencia requerido (de destino);
+si &eacute;ste coincide con el marco de referencia inicial, el
+procedimiento corresponde a una conversi&oacute;n de coordenadas,
+si no, a una transformaci&oacute;n de coordenadas.</li>
+
+
+
+  <li>Seleccione el tipo de coordenadas requeridas.</li>
+
+
+
+  <li>Oprima OK para obtener las coordenadas correspondientes.</li>
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+<div style="text-align: justify; font-family: Helvetica,Arial,sans-serif;" class="imagen"><br>
+
+
+
+<div style="text-align: center;"><img src="imagenes/imagen1.jpg" style="width: 547px; height: 513px;" alt="CartMag Procesar punto"><br>
+
+
+
+<br>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<h2 style="font-family: Helvetica,Arial,sans-serif;">DE: Orig&eacute;n de los datos</h2>
+
+
+
+<p style="font-family: Helvetica,Arial,sans-serif;">Debe seleccionar uno de los dos Datums y un tipo de
+coordenada, de acuerdo a el origen
+de sus datos.</p>
+
+
+
+<h2 style="font-family: Helvetica,Arial,sans-serif;">A: Destino de los datos</h2>
+
+
+
+<p style="font-family: Helvetica,Arial,sans-serif;">Debe seleccionar uno de los dos Datums y un tipo de coordenada,
+de acuerdo al destino
+de sus datos.</p>
+
+
+
+<h2 style="font-family: Helvetica,Arial,sans-serif;">TIPO DE DATUM</h2>
+
+
+
+<ul style="font-family: Helvetica,Arial,sans-serif;">
+
+
+
+  <li><strong>BOGOTA</strong>, Datum
+geod&eacute;sico horizontal, adoptado en 1941, cuyo elipsoide
+asociado corresponde con el Internacional de 1924 y cuyo punto datum se
+localiz&oacute; en el Observatorio Astronomico de
+Bogot&aacute;, de aqu&iacute; su nombre.</li>
+
+
+
+  <li><strong>MAGNA-SIRGAS</strong>, (<span style="font-style: italic;">Marco Geoc&eacute;ntrico
+Nacional de Referencia</span>),&nbsp; Datum
+geod&eacute;sico geoc&eacute;ntrico, cuyo elipsoide asociado
+coincide con la nueva definici&oacute;n del WGS84(G1150),
+introducida a partir del 1 de enero de 2000 (Merrigan et al. 2002).</li>
+
+
+
+</ul>
+
+
+
+<h2 style="font-family: Helvetica,Arial,sans-serif;">TIPO DE COORDENADAS</h2>
+
+
+
+<p style="font-family: Helvetica,Arial,sans-serif;">Debe seleccionar uno de los tres tipos de coordenadas:</p>
+
+
+
+<ul style="font-family: Helvetica,Arial,sans-serif;">
+
+
+
+  <li><strong>PLANAS CARTESIANAS</strong>, El sistema
+de proyecci&oacute;n cartesiana equivale a una
+representaci&oacute;n conforme del elipsoide sobre un plano
+tangente que roza al elipsoide en un punto origen
+[&phi;0,&nbsp;&lambda;0]. La proyecci&oacute;n del
+meridiano que pasa por este punto representa el eje de la coordenada
+Norte. No obstante, los puntos sobre el elipsoide y los equivalentes
+proyectados sobre el plano no tienen una relaci&oacute;n
+geom&eacute;trica, &eacute;sta es puramente
+matem&aacute;tica. La proyecci&oacute;n cartesiana es utilizada
+para la elaboraci&oacute;n de planos de ciudades (cartografia a
+escalas mayores que 1:5000), de alli, existen tantos
+or&iacute;genes de coordenadas cartesianas como ciudades o
+municipios. EL plano de proyecci&oacute;n se define sobre la
+altitud media de la comarca a representar.</li>
+
+
+
+  <li><strong>GEOGRAFICAS</strong>, Arcos
+o &aacute;ngulos que fijan con precisi&oacute;n la
+posici&oacute;n que un punto que ocupa sobre la superficie de la
+Tierra, en valores de latitud y longitud</li>
+
+
+
+  <li><strong>PLANAS GAUSS-KR&Uuml;GER</strong>,
+Es la
+proyecci&oacute;n cartogr&aacute;fica oficial de Colombia, el
+orig&eacute;n principal de las coordenadas Gauss-Kr&uuml;ger se
+defini&oacute; en la pilastra sur del Observatorio
+Astron&oacute;mico
+de Bogot&aacute;, asign&aacute;ndose los valores N = 1 000 000
+m y E =
+1 000 000 m.</li>
+
+
+
+</ul>
+
+
+
+<hr style="font-family: Helvetica,Arial,sans-serif;">
+<div style="margin-left: 40px; font-family: Helvetica,Arial,sans-serif; font-style: italic; color: rgb(0, 0, 153);" class="pie"><font size="-1">CONCOORD&nbsp;&copy;
+2005 Acueducto Agua y
+Alcantarillado de Bogot&aacute; - ESP</font></div>
+
+
+
+</body>
+</html>

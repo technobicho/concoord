@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<map version="1.0">
+	<mapID target="Introduccion" url="introduccion.html"/>
+	<mapID target="ProcesarPunto" url="procesarPunto.html"/>
+	<mapID target="ProcesarArchivo" url="procesarArchivo.html"/>
+	<mapID target="velocidades" url="velocidades.html"/>
+	<mapID target="Consideraciones" url="consideraciones.html"/>
+	<mapID target="ejemplos" url="ejemplos.html"/>
+</map>

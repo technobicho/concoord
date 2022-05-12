@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<index version="1.0">
+	<indexitem target="Introduccion" text="Introduccion"/>
+	<indexitem target="ProcesarPunto" text="Procesamiento de Puntos"/>
+	<indexitem target="ProcesarArchivo" text="Procesamiento de Archivos"/>
+	<indexitem target="velocidades" text="Aplicacion de velocidades"/>
+	<indexitem target="Consideraciones" text="Consideraciones"/>
+	<indexitem target="ejemplos" text="ejemplos"/>
+</index>

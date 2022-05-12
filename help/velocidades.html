@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+
+
+
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
+
+
+  
+  
+  
+  
+  <title>Aplicaci&oacute;n de velocidades</title>
+</head>
+
+
+<body>
+
+
+
+
+	
+<h1 style="font-family: Helvetica,Arial,sans-serif;">Aplicaci&oacute;n de Velocidades</h1>
+
+
+
+
+	
+<hr style="font-family: Helvetica,Arial,sans-serif;">
+		
+<p style="font-family: Helvetica,Arial,sans-serif;">Este m&oacute;dulo permite trasladar las coordenadas de un punto en
+el tiempo. Las certificaciones expedidas por el IGAC presentan las
+coordenadas en la &eacute;poca de referencia de <strong>MAGNA-SIRGAS</strong>
+(mayo 31 de 1995 = 1995.4); no obstante, el procesamiento de la
+informaci&oacute;n GNSS (Global Navigation Satellite System - GPS,
+GLONASS, GALILEO, etc.-) debe hacerse en la &eacute;poca de
+observaci&oacute;n, dado que a ella se refieren las efem&eacute;rides
+(coordenadas) satelitales registradas por los receptores terrestres.
+Una vez se han procesado los datos en la &eacute;poca de
+observaci&oacute;n, las coordenadas calculadas deben "regresarse" a la &eacute;poca de definici&oacute;n
+(1995.4) para que haya consistencia con el marco de referencia <strong>MAGNA-SIRGAS</strong>.</p>
+
+
+
+
+		
+<div style="font-family: Helvetica,Arial,sans-serif;" class="nota">
+			
+<h3>Importante:</h3>
+
+
+
+
+			
+<ul>
+
+
+
+  <li>Debe identificarse claramente la &eacute;poca de las coordenadas
+a trasladar, pues dicho traslado puede ser desde la &eacute;poca de
+referencia (1995.4) a la &eacute;poca de observaci&oacute;n o viceversa.</li>
+
+
+
+  <li>Las velocidades dadas deben ser id&eacute;nticas a las
+proporcionadas en las certificaciones del IGAC o por el modelo de
+velocidades de SIRGAS. Debe
+respetarse especialmente el signo de dichas velocidades, pues el
+programa identifica internamente si los desplazamientos estimados se
+adicionan o sustraen de las coordenadas introducidas en la &eacute;poca
+I para obtener los valores correspondientes en la &eacute;poca II.</li>
+
+
+
+  <li>Las coordenadas procesadas en la &eacute;poca de
+observaci&oacute;n deben regresarse a la &eacute;poca de referencia;
+para el efecto, las coordenadas nuevas se introducen en el
+m&oacute;dulo de la &eacute;poca I, se indica la fecha del
+posicionamiento GNSS, se introducen las velocidades correspondientes y,
+en el m&oacute;dulo de la &eacute;poca II, <span style="font-weight: bold;">CONCOORD</span><strong> </strong>presenta las coordenadas del punto nuevo en la &eacute;poca de referencia (1995.4).</li>
+
+
+
+  <li>Las coordenadas dadas en la &eacute;poca I deben estar referidas a <strong>MAGNA-SIRGAS</strong>.</li>
+
+
+
+  <li>La altura elipsoidal debe expresarse en metros.</li>
+
+
+
+  <li>El formato de las coordenadas geogr&aacute;ficas corresponde con
+GG.MMSSSSS, por ejemplo, la latitud 4&deg; 15&acute; 12,355" debe
+introducirse como 4.1512355.</li>
+
+
+
+  <li>Debe anteponerse el signo menos [-] a las latitudes SUR.</li>
+
+
+
+  <li>El programa asume todos los valores dados en la longitud como OESTE.</li>
+
+
+
+  <li>El separador decimal siempre es el punto [.].</li>
+
+
+
+</ul>
+
+
+
+
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+
+
+
+<span style="font-style: italic; font-family: Helvetica,Arial,sans-serif;"><br>
+
+
+
+</span>
+<div style="text-align: center; font-family: Helvetica,Arial,sans-serif;"><span style="font-style: italic;"><img style="width: 547px; height: 513px;" alt="Procesar velocidades" src="imagenes/imagen3.jpg"></span><br>
+
+
+
+<div style="text-align: left;"><br>
+
+
+
+<ol>
+
+
+
+  <li>Debe definir las coordenadas geogr&aacute;ficas de la
+&eacute;poca I y su fecha, si es la epoca 1995.4 ser&aacute; "31 de
+mayo de 1995".</li>
+
+
+
+  <li>Definir la fecha de la &eacute;poca II, a la que se le desea aplicar la velocidad.</li>
+
+
+
+  <li>Definir los valores de las velocidades dadas en las certificaciones Vx, Vy, Vz.</li>
+
+
+
+</ol>
+
+
+
+</div>
+
+
+
+<span style="font-style: italic;"></span></div>
+
+
+
+<span style="font-style: italic; font-family: Helvetica,Arial,sans-serif;"></span>
+<hr style="font-family: Helvetica,Arial,sans-serif;">
+	
+<div style="font-family: Helvetica,Arial,sans-serif; font-style: italic; color: rgb(0, 0, 153);" class="pie"><font size="-1">CONCOORD&nbsp;&copy;
+2005 Acueducto Agua y
+Alcantarillado de Bogot&aacute; - ESP</font></div>
+
+
+
+
+</body>
+</html>

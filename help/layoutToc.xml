@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<toc version="1.0">
+	<tocitem text="Indice de Ayuda">
+		<tocitem text="Introduccion" target="Introduccion"/>
+		<tocitem text="Procesamiento de Puntos" target="ProcesarPunto"/>
+		<tocitem text="Procesamiento de Archivos" target="ProcesarArchivo"/>
+		<tocitem text="Aplicacion de velocidades" target="velocidades"/>
+		<tocitem text="Consideraciones" target="Consideraciones"/>
+	</tocitem>
+</toc>

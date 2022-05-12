@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
+  
+  
+  <title>Consideraciones adicionales a la conversi&oacute;n y transformaci&oacute;n de coordenadas</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+
+<body>
+
+
+	
+<h1 style="font-family: Helvetica,Arial,sans-serif;">Consideraciones adicionales a la conversi&oacute;n y transformaci&oacute;n de coordenadas</h1>
+
+
+	
+<hr style="font-family: Helvetica,Arial,sans-serif;">
+		
+<p style="font-family: Helvetica,Arial,sans-serif;">Si se selecciona la
+opci&oacute;n de coordenadas planas cartesianas aparece una ventana con
+las caracter&iacute;sticas del origen cartesiano para Bogot&aacute;.</p>
+<p style="font-family: Helvetica,Arial,sans-serif;"></p>
+
+
+<div style="font-family: Helvetica,Arial,sans-serif; text-align: center;" class="imagen"><img src="imagenes/imagen6.jpg" alt="Dialogo con origenes cartesianos"></div>
+
+
+
+<p style="font-family: Helvetica,Arial,sans-serif;">En esta versi&oacute;n de <span style="font-weight: bold;">CONCOORD</span>
+se incluyen los or&iacute;genes cartesianos definidos por la
+Divisi&oacute;n de Geodesia del IGAC hasta diciembre de 2004 de la
+ciudad de Bogot&aacute;, la adici&oacute;n de or&iacute;genes
+posteriores debe hacerse editando el archivo de texto que se encuentra
+en la carpeta <strong class="red"><span style="color: rgb(255, 0, 0);">../filesConfig/paramCarte.dat</span> </strong>de la siguiente manera.</p>
+
+
+		
+<p style="font-family: Helvetica,Arial,sans-serif;"> Abra el archivo
+con un editor de texto plano(bloc de notas o similar), si utiliza
+procesadores de palabra(MS Word, OpenOffice Writer, o similar), salve
+el documento como texto plano, ya que los formatos que manejan los
+procesadores de palabra adicionan caracteres que <strong>CONCOORD</strong> no reconoce.
+		</p>
+
+<div style="font-family: Helvetica,Arial,sans-serif;" class="texto">
+		
+<h3>Formato de cada or&iacute;gen:</h3>
+
+<span style="font-family: monospace;"> numero
+consecutivo,&brvbar;nombre del origen&brvbar;,a&ntilde;o,latitud en
+Magna-Sirgas,longitud en Magna-Sirgas,latitud en Internacional
+Bogot&aacute;,longitud en internacional Bogot&aacute;,plano de
+proyecci&oacute;n,coordenada plana cartesiana norte,coordenada plana
+cartesiana este,&brvbar;descripci&oacute;n del origen&brvbar;</span></div>
+
+
+		
+<p style="font-family: Helvetica,Arial,sans-serif;"> El formato
+aqu&iacute; descrito debe ser digitado en una misma linea de texto,
+separado por comas, los textos estan limitados por el caracter '
+&brvbar; ', el cual permite la inclusi&oacute;n de car&aacute;cteres
+especiales dentro de los textos.</p>
+
+
+		
+<div style="font-family: Helvetica,Arial,sans-serif;" class="texto">
+			
+<h3>Ejemplo:</h3>
+
+<font style="font-family: monospace;">
+13,&brvbar;BOGOT&Aacute;&brvbar;,0,4.404975,-74.084773,4.410000,-74.090000,2550,109320.965,92334.879,&brvbar;COORDENADAS
+PLANAS CARTESIANAS CON ORIGEN INTERSECCI&Oacute;N DEL PARALELO
+4&deg;41&acute; NORTE CON EL MERIDIANO 74&deg;09&acute; AL OESTE DE
+GREENWICH&brvbar;</font>
+		</div>
+
+
+		
+		
+		
+<p style="font-family: Helvetica,Arial,sans-serif;">Si se selecciona la
+opci&oacute;n de coordenadas planas Gauss-Kr&uuml;ger aparece una
+ventana con los or&iacute;genes existentes en Colombia, aqu&iacute; es
+necesario indicar el origen al cual est&aacute;n asociadas las
+coordenadas iniciales o las de destino.</p>
+
+
+		
+<div style="font-family: Helvetica,Arial,sans-serif; text-align: center;" class="imagen"><img src="imagenes/imagen7.jpg" alt="Dialogo con origenes Gauss-Kr&uuml;ger"></div>
+
+
+		
+<div style="font-family: Helvetica,Arial,sans-serif;" class="imagen"></div>
+
+
+		
+<p style="font-family: Helvetica,Arial,sans-serif;">La opci&oacute;n de
+transformaci&oacute;n af&iacute;n se encuentra activa por defecto, cada
+vez que se realice una transformaci&oacute;n aparecera una ventana
+adicional mostrando los seis par&aacute;metros de transformaci&oacute;n
+y las coordenadas l&iacute;mites del cuadr&aacute;ngulo para el cual
+dichos par&aacute;metros son v&aacute;lidos. Esta versi&oacute;n de <strong>CONCOORD</strong>
+incluye los par&aacute;metros de transformaci&oacute;n af&iacute;n para
+la ciudad de Bogot&aacute; (a&ntilde;o 2004), tanto para coordenadas
+Cartesianas, como Gauss-Kr&uuml;ger.</p>
+
+
+<div style="font-family: Helvetica,Arial,sans-serif; text-align: center;" class="imagen"><img src="imagenes/imagen8.jpg" alt="Uso de la transformaci&oacute;n bidimensional af&iacute;n"></div>
+
+
+
+		
+<p style="font-family: Helvetica,Arial,sans-serif;">Par&aacute;metros
+de transformaci&oacute;n af&iacute;n para otras regiones o proyectos
+espec&iacute;ficos se adicionan editando el archivo <strong class="red"><span style="color: rgb(255, 0, 0);">../fileConfig/paramAfinCart.dat</span> </strong>para la transformaci&oacute;n af&iacute;n de las coordenadas Cartesianas y <strong class="red"><span style="color: rgb(255, 0, 0);">../fileConfig/paramAfinGauss.dat</span> </strong>para
+la transformaci&oacute;n af&iacute;n de coordenadas Gauss-Kr&uuml;ger,
+estos dos archivos manejan la misma estructura interna.</p>
+
+
+		
+<p style="font-family: Helvetica,Arial,sans-serif;">Abra cada uno de
+los archivos con un editor de texto plano(bloc de notas o similar), si
+utiliza procesadores de palabra(MS Word, OpenOffice Writer, o similar),
+guarde el documento como texto plano, ya que los formatos que manejan
+los procesadores de palabra adicionan caracteres que <span style="font-weight: bold;">CONCOORD</span> no reconoce.</p>
+
+
+		
+<div style="font-family: Helvetica,Arial,sans-serif;" class="texto">
+		
+<h3>Formato para cada ciudad</h3>
+
+<span style="font-family: monospace;"> nombre,latitud minima,latitud
+maxima, longitud minima, longitud maxima, par&aacute;metro a,
+par&aacute;metro b, par&aacute;metro c, par&aacute;metro d,
+par&aacute;metro e, par&aacute;metro f</span></div>
+
+
+		
+<p style="font-family: Helvetica,Arial,sans-serif;">Cada conjunto de par&aacute;metros debe ser incluido en los archivos en una l&iacute;nea independiente, sin espacios.</p>
+
+
+		
+<div style="font-family: Helvetica,Arial,sans-serif;" class="texto">
+		
+<h3>Ejemplo paramAfinCart.dat :</h3>
+
+<span style="font-family: monospace;">
+		Bogota,3,5,74.4,73,1.000015853,-0.000003258058000,-1.206327338,-0.000002279698000,0.999999028,-0.131654982</span>
+		
+<h3>Ejemplo paramAfinGauss.dat :</h3>
+
+<span style="font-family: monospace;">
+		Bogota,3,5,74.4,73,1.000016460,-0.000003408048,-12.997,-0.00000189946,0.999999052,-0.872</span>
+		</div>
+
+
+		
+	
+<hr style="font-family: Helvetica,Arial,sans-serif;">
+	
+<div style="font-style: italic; color: rgb(0, 0, 153); font-family: Helvetica,Arial,sans-serif;" class="pie"><font size="-1">CONCOORD&nbsp;&copy;
+2005 Acueducto Agua y
+Alcantarillado de Bogot&aacute; - ESP</font></div>
+
+
+</body>
+</html>

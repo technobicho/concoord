@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+  
+  <title>Procesamiento de Archivos</title>
+</head>
+
+
+<body>
+
+
+<h1 style="font-family: Helvetica,Arial,sans-serif;">Procesamiento de Archivos</h1>
+
+
+<hr style="font-family: Helvetica,Arial,sans-serif;">
+<p style="font-family: Helvetica,Arial,sans-serif;">El procesamiento de archivos permite al usuario convertir o
+transformar las coordenadas (geogr&aacute;ficas, planas cartesianas
+o planas Gauss-Kr&uuml;ger) de un conjunto de puntos contenidos en
+un archivo de texto plano y asociados a alguno de los dos sistemas de
+referencia utilizados en Colombia (Datum BOGOT&Aacute;,
+MAGNA-SIRGAS).</p>
+
+
+<p style="font-family: Helvetica,Arial,sans-serif;">El formato de los archivos aceptados por <span style="font-weight: bold;">CONCOORD</span> puede ser:</p>
+
+
+<ol style="font-family: Helvetica,Arial,sans-serif;">
+
+
+  <li><span style="font-weight: bold;">Para coordenadas planas cartesianas o planas
+Gauss-Kr&uuml;ger:
+    </span><br>
+
+    
+    <ul>
+
+      <li>Norte,Este</li>
+
+      <li>Identificador,Norte,Este</li>
+
+      <li>Identificador,Norte,Este,Altura</li>
+
+      <li>Este,Norte</li>
+
+      <li>Identificador,Este,Norte</li>
+
+      <li>Identificador,Este,Norte,Altura</li>
+
+    
+    </ul>
+
+    
+    <ul>
+
+
+
+
+
+
+
+
+    
+    </ul>
+
+
+  </li>
+
+
+  <li><span style="font-weight: bold;">Para coordenadas geogr&aacute;ficas:</span>
+    
+    <ul>
+
+
+      <li>Latitud,Longitud</li>
+
+
+      <li>Identificador,Latitud,Longitud</li>
+
+
+      <li>Identificador,Latitud,Longitud,Altura</li>
+
+
+      <li>Longitud,Latitud</li>
+
+
+      <li>Identificador,Longitud,Latitud</li>
+
+
+      <li>Identificador,Longitud,Latitud,Altura</li>
+
+
+    
+    </ul>
+
+
+  </li>
+
+
+</ol>
+
+
+<div style="font-family: Helvetica,Arial,sans-serif;" class="nota">
+<h2>Importante:</h2>
+
+
+<ul>
+
+
+  <li>Debe identificarse claramente, tanto en los valores de
+entrada, como en los de salida, el tipo de coordenadas y su marco de
+referencia</li>
+
+
+  <li>Las coordenadas contenidas en el archivo de entrada deben
+ser de un s&oacute;lo tipo (o planas cartesianas, o planas
+Gauss-Kr&uuml;ger o geogr&aacute;ficas), no es posible la
+combinaci&oacute;n de diferentes tipos de coordenadas en un mismo
+archivo.</li>
+
+
+  <li>Los puntos contenidos en el archivo de entrada deben estar
+definidos sobre un &uacute;nico sistema de referencia (o <strong>Datum
+BOGOT&Aacute;</strong>, o <strong>MAGNA-SIRGAS</strong>),
+no es posible la combinaci&oacute;n de coordenadas referidas a
+diferentes datum en un mismo archivo.</li>
+
+
+  <li>Las coordenadas planas (cartesianas o
+Gauss-Kr&uuml;ger) deben estar asociadas a un &uacute;nico
+origen de proyecci&oacute;n, no es posible la
+combinaci&oacute;n de coordenadas planas asociadas a diferentes
+or&iacute;genes de proyecci&oacute;n en un mismo archivo. Si el
+archivo de entrada contiene coordenadas geogr&aacute;ficas y se
+requieren planas Gauss-Kr&uuml;ger, seleccionando la
+opci&oacute;n "Autom&aacute;tico", cada punto ser&aacute;
+calculado en el origen Gauss-Kr&uuml;ger correspondiente.</li>
+
+
+  <li>Las coordenadas planas cartesianas, las planas
+Gauss-Kr&uuml;ger y la altura deben expresarse en metros.</li>
+
+
+  <li>El formato de las coordenadas geogr&aacute;ficas
+corresponde con GG.MMSSSSS, por ejemplo, la latitud 4&deg;
+15&acute; 12,355" debe introducirse como 4.1512355. Debe
+anteponerse el signo menos [-] a las latitudes SUR.</li>
+
+
+  <li>El programa asume todos los valores dados en la longitud
+como OESTE</li>
+
+
+  <li>El separador decimal siempre es el punto [.].</li>
+
+
+  <li>El separador entre el identificador del punto, las
+coordenadas y la altura dentro del archivo de texto siempre es la coma
+[,].</li>
+
+
+  <li>Los archivos de entrada no deben tener encabezado, la
+primera l&iacute;nea corresponde a las coordenadas del primer punto
+contenido en el archivo.</li>
+
+
+  <li>En los archivos de salida se mantiene el formato del
+archivo de entrada, incluy&eacute;ndose en la primera
+l&iacute;nea un encabezado con la secuencia de los campos
+correspondientes.</li>
+
+
+  <li>Si no est&aacute; disponible la altura de los puntos
+incluidos en el archivo de entrada y, a&uacute;n as&iacute; se
+prefiere el uso del Modelo Molodensky-Badekas, debe indicarse un valor
+de altura aproximado para cada uno de los puntos; de lo contrario, <strong>CONCOORD</strong>
+adelanta una transformaci&oacute;n bidimensional por defecto.</li>
+
+
+  <li>Las coordenadas transformadas contienen una sola cifra
+decimal, dadas las limitaciones de precisi&oacute;n presentes en
+cualquier m&eacute;todo de transformaci&oacute;n de datum. Las
+alturas niveladas no se transforman.</li>
+
+
+</ul>
+
+
+</div>
+
+
+<span style="font-style: italic; font-family: Helvetica,Arial,sans-serif;"><br>
+
+
+</span>
+<div style="text-align: center; font-family: Helvetica,Arial,sans-serif;"><span style="font-style: italic;"><img style="width: 547px; height: 513px;" alt="Procesar Archivo" src="imagenes/imagen2.jpg"></span><br>
+
+
+<br>
+
+
+</div>
+
+
+<h2 style="font-family: Helvetica,Arial,sans-serif;">DE: Orig&eacute;n de los datos</h2>
+
+
+<ul style="font-family: Helvetica,Arial,sans-serif;">
+
+
+  <li>Debe seleccionar uno de los dos Datums y un tipo de
+coordenada, de acuerdo a el origen
+de sus datos.</li>
+
+
+  <li>Debe abrir el archivo de texto plano, separado por comas y
+extensi&oacute;n *.txt o *.csv.</li>
+
+
+  <li>Debe seleccionar el formato interno del archivo:</li>
+
+
+  
+  <ul>
+
+
+    <li style="font-weight: bold;">Para coordenadas Planas Cartesianas y Planas
+Gauss-Kr&uuml;ger:</li>
+
+
+    
+    <ul>
+
+
+      <li>Norte, Este</li>
+
+
+      <li>id, Norte, Este</li>
+
+
+      <li>id, Norte, Este, Altura</li>
+
+
+      <li>Este, Norte</li>
+
+
+      <li>id, Este, Norte</li>
+
+
+      <li>id, Este, Norte, Altura</li>
+
+
+    
+    </ul>
+
+
+    <li style="font-weight: bold;">Para coordenadas Geogr&aacute;ficas:</li>
+
+
+    
+    <ul>
+
+
+      <li>Latitud, Longitud</li>
+
+
+      <li>id, Latitud, Longitud</li>
+
+
+      <li>id, Latitud, Longitud, Altura</li>
+
+
+      <li>Longitud, Latitud</li>
+
+
+      <li>id, Longitud, Latitud</li>
+
+
+      <li>id, Longitud, Latitud, Altura</li>
+
+
+    
+    </ul>
+
+
+  
+  </ul>
+
+
+</ul>
+
+
+<h2 style="font-family: Helvetica,Arial,sans-serif;">A: Destino de los datos</h2>
+
+
+<ul style="font-family: Helvetica,Arial,sans-serif;">
+
+
+  <li>Debe seleccionar uno de los dos Datums y un tipo de
+coordenada, de acuerdo al destino
+de sus datos.</li>
+
+
+  <li>Debe crear el archivo de texto plano, donde desea guardar
+los datos procesados.</li>
+
+
+</ul>
+
+
+<h2 style="font-family: Helvetica,Arial,sans-serif;">TIPO DE DATUM</h2>
+
+
+<ul style="font-family: Helvetica,Arial,sans-serif;">
+
+
+  <li><strong>BOGOTA</strong>, Datum
+geod&eacute;sico horizontal, adoptado en 1941, cuyo elipsoide
+asociado corresponde con el Internacional de 1924 y cuyo punto datum se
+localiz&oacute; en el Observatorio Astronomico de
+Bogot&aacute;, de aqu&iacute; su nombre.</li>
+
+
+  <li><strong>MAGNA-SIRGAS</strong>, (<span style="font-style: italic;">Marco Geoc&eacute;ntrico
+Nacional de Referencia</span>),&nbsp; Datum
+geod&eacute;sico geoc&eacute;ntrico, cuyo elipsoide asociado
+coincide con la nueva definici&oacute;n del WGS84(G1150),
+introducida a partir del 1 de enero de 2000 (Merrigan et al. 2002).</li>
+
+
+</ul>
+
+
+<h2 style="font-family: Helvetica,Arial,sans-serif;">TIPO DE COORDENADAS</h2>
+
+
+<p style="font-family: Helvetica,Arial,sans-serif;">Debe seleccionar uno de los tres tipos de coordenadas:</p>
+
+
+<ul style="font-family: Helvetica,Arial,sans-serif;">
+
+
+  <li><strong>PLANAS CARTESIANAS</strong>, El sistema
+de proyecci&oacute;n cartesiana equivale a una
+representaci&oacute;n conforme del elipsoide sobre un plano
+tangente que roza al elipsoide en un punto origen
+[&phi;0,&nbsp;&lambda;0]. La proyecci&oacute;n del
+meridiano que pasa por este punto representa el eje de la coordenada
+Norte. No obstante, los puntos sobre el elipsoide y los equivalentes
+proyectados sobre el plano no tienen una relaci&oacute;n
+geom&eacute;trica, &eacute;sta es puramente
+matem&aacute;tica. La proyecci&oacute;n cartesiana es utilizada
+para la elaboraci&oacute;n de planos de ciudades (cartografia a
+escalas mayores que 1:5000), de alli, existen tantos
+or&iacute;genes de coordenadas cartesianas como ciudades o
+municipios. EL plano de proyecci&oacute;n se define sobre la
+altitud media de la comarca a representar.</li>
+
+
+  <li><strong>GEOGRAFICAS</strong>, Arcos
+o &aacute;ngulos que fijan con precisi&oacute;n la
+posici&oacute;n que un punto que ocupa sobre la superficie de la
+Tierra, en valores de latitud y longitud</li>
+
+
+  <li><strong>PLANAS GAUSS-KR&Uuml;GER</strong>,
+Es la
+proyecci&oacute;n cartogr&aacute;fica oficial de Colombia, el
+orig&eacute;n principal de las coordenadas Gauss-Kr&uuml;ger se
+defini&oacute; en la pilastra sur del Observatorio
+Astron&oacute;mico
+de Bogot&aacute;, asign&aacute;ndose los valores N = 1 000 000
+m y E =
+1 000 000 m.</li>
+
+
+</ul>
+
+
+
+<span style="font-style: italic; font-family: Helvetica,Arial,sans-serif;"></span>
+<div style="font-family: Helvetica,Arial,sans-serif; color: rgb(255, 0, 0); font-style: italic;" class="nota">Si el archivo contiene una gran cantidad
+de puntos, se despliega un dialogo con una barra de estado indicando el
+procesamiento de los datos, al terminar se informa que el proceso ha
+concluido.</div>
+
+
+<hr style="font-family: Helvetica,Arial,sans-serif;">
+<div style="color: rgb(0, 0, 153); font-style: italic; font-family: Helvetica,Arial,sans-serif;" class="pie"><font size="-1">CONCOORD&nbsp;&copy;
+2005 Acueducto Agua y
+Alcantarillado de Bogot&aacute; - ESP</font></div>
+
+
+</body>
+</html>
